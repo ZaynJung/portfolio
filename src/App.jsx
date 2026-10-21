@@ -4,7 +4,8 @@ import placeholderImage from "../assets/images/project-placeholder.png";
 const projects = [
   {
     id: "project-1",
-    title: "Project 1",
+    title: "SHOTGUN!",
+    category: "Concept Art and Design",
     description: [
       "Introduce your first project here. Describe the idea behind the work, what inspired it, and what you wanted to communicate.",
       "Use a second paragraph to talk about your role, process, and the materials or tools you used. The images below can show the finished work and how it developed.",
@@ -105,7 +106,7 @@ function ProjectGrid() {
             <Artwork project={project} />
             <h3>{project.title}</h3>
           </a>
-          <p>Project placeholder</p>
+          <p>{project.category ?? "Project placeholder"}</p>
         </article>
       ))}
     </div>

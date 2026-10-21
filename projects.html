@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A collection of art, design, and creative explorations by Zayn.">
+  <title>Projects | Zayn</title>
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("scoutTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header page">
+    <a class="wordmark" href="index.html">Zayn<span>Art &amp; design</span></a>
+    <nav aria-label="Main navigation"><a href="about.html">About me</a><a href="projects.html" aria-current="page">Projects <span aria-hidden="true">&nearr;</span></a></nav>
+  </header>
+  <main id="main" class="page">
+    <section class="page-intro"><p class="eyebrow">A collection of things made</p><h1>Projects</h1><p>Art, design, and everything in between.</p><p class="placeholder-note">Sample layouts only. Real projects and artwork are coming soon.</p></section>
+    <section aria-label="Project collection" class="project-grid full-grid">
+      <article class="project-card">
+        <div class="artwork composition-one" role="img" aria-label="Geometric artwork placeholder"><span></span><i></i></div>
+        <h2>Shape studies <span>01</span></h2><p>Art / Placeholder</p><p class="project-description">Add the story, materials, and process behind this project here.</p>
+      </article>
+      <article class="project-card">
+        <div class="artwork composition-two" role="img" aria-label="Circular artwork placeholder"><span></span><i></i></div>
+        <h2>In conversation <span>02</span></h2><p>Design / Placeholder</p><p class="project-description">Add the story, materials, and process behind this project here.</p>
+      </article>
+      <article class="project-card">
+        <div class="artwork composition-three" role="img" aria-label="Stacked forms artwork placeholder"><span></span><i></i></div>
+        <h2>Finding balance <span>03</span></h2><p>Exploration / Placeholder</p><p class="project-description">Add the story, materials, and process behind this project here.</p>
+      </article>
+      <article class="project-card">
+        <div class="artwork composition-two alternate" role="img" aria-label="Overlapping forms artwork placeholder"><span></span><i></i></div>
+        <h2>Everyday forms <span>04</span></h2><p>Art / Placeholder</p><p class="project-description">Add the story, materials, and process behind this project here.</p>
+      </article>
+      <article class="project-card">
+        <div class="artwork composition-three alternate" role="img" aria-label="Abstract arrangement artwork placeholder"><span></span><i></i></div>
+        <h2>Between spaces <span>05</span></h2><p>Design / Placeholder</p><p class="project-description">Add the story, materials, and process behind this project here.</p>
+      </article>
+      <article class="project-card">
+        <div class="artwork composition-one alternate" role="img" aria-label="Abstract shape study placeholder"><span></span><i></i></div>
+        <h2>Work in progress <span>06</span></h2><p>Exploration / Placeholder</p><p class="project-description">Add the story, materials, and process behind this project here.</p>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer page"><a class="footer-name" href="index.html">Zayn</a><p>Art &amp; design portfolio</p><a href="about.html">About me &nearr;</a></footer>
+</body>
+</html>

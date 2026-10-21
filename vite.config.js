@@ -9,8 +9,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: fileURLToPath(new URL("./index.html", import.meta.url)),
-        about: fileURLToPath(new URL("./about.html", import.meta.url)),
-        projects: fileURLToPath(new URL("./projects.html", import.meta.url)),
+        project1: fileURLToPath(new URL("./project-1.html", import.meta.url)),
+        project2: fileURLToPath(new URL("./project-2.html", import.meta.url)),
+        project3: fileURLToPath(new URL("./project-3.html", import.meta.url)),
       },
     },
   },

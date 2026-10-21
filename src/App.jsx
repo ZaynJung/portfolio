@@ -1,63 +1,111 @@
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
+import placeholderImage from "../assets/images/project-placeholder.png";
 
 const projects = [
-  { title: "Shape studies", category: "Art", composition: "composition-one", alt: "Placeholder composition of a circle, arch, and fine lines" },
-  { title: "In conversation", category: "Design", composition: "composition-two", alt: "Placeholder composition of overlapping circular forms" },
-  { title: "Finding balance", category: "Exploration", composition: "composition-three", alt: "Placeholder composition of stacked geometric forms" },
-  { title: "Everyday forms", category: "Art", composition: "composition-two alternate", alt: "Overlapping forms artwork placeholder" },
-  { title: "Between spaces", category: "Design", composition: "composition-three alternate", alt: "Abstract arrangement artwork placeholder" },
-  { title: "Work in progress", category: "Exploration", composition: "composition-one alternate", alt: "Abstract shape study placeholder" },
+  {
+    id: "project-1",
+    title: "Project 1",
+    description: [
+      "Introduce your first project here. Describe the idea behind the work, what inspired it, and what you wanted to communicate.",
+      "Use a second paragraph to talk about your role, process, and the materials or tools you used. The images below can show the finished work and how it developed.",
+    ],
+  },
+  {
+    id: "project-2",
+    title: "Project 2",
+    description: [
+      "Introduce your second project here. Describe the idea behind the work, what inspired it, and what you wanted to communicate.",
+      "Use a second paragraph to talk about your role, process, and the materials or tools you used. The images below can show the finished work and how it developed.",
+    ],
+  },
+  {
+    id: "project-3",
+    title: "Project 3",
+    description: [
+      "Introduce your third project here. Describe the idea behind the work, what inspired it, and what you wanted to communicate.",
+      "Use a second paragraph to talk about your role, process, and the materials or tools you used. The images below can show the finished work and how it developed.",
+    ],
+  },
 ];
 
 function Artwork({ project }) {
   return (
-    <div className={`artwork ${project.composition}`} role="img" aria-label={project.alt}>
-      <span /><i />
-    </div>
+    <img className="artwork" src={placeholderImage} alt={`${project.title} image placeholder`}
+      width="384" height="234" />
   );
 }
 
 function Portrait() {
-  return <div className="portrait-placeholder" role="img" aria-label="Portrait placeholder"><span /></div>;
+  return <img className="portrait-placeholder" src={placeholderImage} alt="Portrait placeholder" width="384" height="234" loading="lazy" />;
 }
 
 function Header({ page }) {
   return (
-    <header className={`site-header ${page === "home" ? "home-header" : "page"}`}>
+    <header id="top" tabIndex={-1} className={`site-header ${page === "home" ? "home-header" : "page"}`}>
       <a className="wordmark" href="index.html" aria-current={page === "home" ? "page" : undefined}>
-        Zayn<span>Art &amp; design</span>
+        Zayn.
       </a>
       <nav aria-label="Main navigation">
-        <a href="about.html" aria-current={page === "about" ? "page" : undefined}>About me</a>
-        <a href="projects.html" aria-current={page === "projects" ? "page" : undefined}>
-          Projects <span aria-hidden="true">&#8599;</span>
-        </a>
+        <a href={page === "home" ? "#projects" : "index.html#projects"}>Projects</a>
+        <a href="#about-me">About me</a>
       </nav>
     </header>
   );
 }
 
-function Footer({ page }) {
+function SocialLinks() {
   return (
-    <footer className="site-footer page">
-      <a className="footer-name" href="index.html">Zayn</a>
-      <p>Art &amp; design portfolio</p>
-      {page === "projects"
-        ? <a href="about.html">About me &#8599;</a>
-        : <a href="projects.html">Explore the work &#8599;</a>}
+    <div className="social-links" role="group" aria-label="Social links">
+      <button className="social-button" type="button" disabled
+        aria-label="LinkedIn link coming soon" title="LinkedIn link coming soon">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+          <path d="M5 10v10M10 20V10m0 4c0-6 9-6 9 0v6" />
+        </svg>
+      </button>
+      <button className="social-button" type="button" disabled
+        aria-label="Email link coming soon" title="Email link coming soon">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="m3 7 9 6 9-6" />
+        </svg>
+      </button>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="page">
+      <section id="about-me" className="about-preview" aria-labelledby="about-heading">
+        <div className="about-copy">
+          <h2 id="about-heading">About me.</h2>
+          <p className="about-name">Hello, I'm Zayn.</p>
+          <p>This is where a short introduction will go. Share what you make, what inspires you, and the ideas behind your practice.</p>
+          <SocialLinks />
+          <p className="social-note">LinkedIn and email links coming soon.</p>
+        </div>
+        <Portrait />
+      </section>
+      <div className="site-footer">
+        <a className="footer-name" href="index.html">Zayn</a>
+        <p>Art &amp; design portfolio</p>
+        <a className="outline-button back-to-top" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+      </div>
     </footer>
   );
 }
 
-function ProjectGrid({ descriptions = false }) {
+function ProjectGrid() {
   return (
-    <div className={`project-grid${descriptions ? " full-grid" : ""}`}>
-      {projects.map((project, index) => (
-        <article className="project-card" key={project.title}>
-          <Artwork project={project} />
-          <h2>{project.title} <span>{String(index + 1).padStart(2, "0")}</span></h2>
-          <p>{project.category} / Placeholder</p>
-          {descriptions && <p className="project-description">Add the story, materials, and process behind this project here.</p>}
+    <div className="project-grid">
+      {projects.map((project) => (
+        <article className="project-card" key={project.id}>
+          <a className="project-link" href={`${project.id}.html`} aria-label={`View ${project.title}`}>
+            <Artwork project={project} />
+            <h3>{project.title}</h3>
+          </a>
+          <p>Project placeholder</p>
         </article>
       ))}
     </div>
@@ -65,38 +113,72 @@ function ProjectGrid({ descriptions = false }) {
 }
 
 function Slideshow() {
-  const featured = projects.slice(0, 3);
-  const [current, setCurrent] = useState(0);
-  const [announcement, setAnnouncement] = useState("");
+  const featured = projects;
+  const [selection, setSelection] = useState({
+    current: 0,
+    previous: null,
+    direction: 1,
+    revision: 0,
+  });
+  const { current, previous, direction, revision } = selection;
+  const announcement = revision === 0
+    ? ""
+    : `Project ${current + 1} of ${featured.length}: ${featured[current].title}, Image placeholder`;
 
-  function showSlide(index) {
-    const next = (index + featured.length) % featured.length;
-    setCurrent(next);
-    setAnnouncement(`Artwork ${next + 1} of ${featured.length}: ${featured[next].title}, Artwork placeholder`);
+  function showSlide(getNextIndex, forcedDirection) {
+    setSelection((active) => {
+      const next = (getNextIndex(active.current) + featured.length) % featured.length;
+      if (next === active.current) return active;
+
+      return {
+        current: next,
+        previous: active.current,
+        direction: forcedDirection ?? (next > active.current ? 1 : -1),
+        revision: active.revision + 1,
+      };
+    });
+  }
+
+  function finishTransition(event) {
+    if (event.animationName !== "slide-enter") return;
+    setSelection((active) => active.revision === revision ? { ...active, previous: null } : active);
   }
 
   return (
-    <section className="slideshow" aria-label="Featured artwork placeholders" aria-roledescription="carousel">
-      <div className="slides">
+    <section id="middle" className="slideshow"
+      aria-label="Featured projects" aria-roledescription="carousel">
+      <div className="slides" style={{ "--slide-direction": direction }}>
         {featured.map((project, index) => (
-          <figure className="slide" key={project.title} hidden={index !== current}
+          <figure
+            className={`slide${index === current ? " is-active" : ""}${previous !== null && index === current ? " is-entering" : ""}${index === previous ? " is-exiting" : ""}`}
+            key={`${project.id}-${revision}`}
+            hidden={index !== current && index !== previous}
+            aria-hidden={index !== current}
+            inert={index !== current}
+            onAnimationEnd={finishTransition}
             role="group" aria-roledescription="slide" aria-label={`${index + 1} of ${featured.length}`}>
-            <Artwork project={project} />
-            <figcaption><span>{String(index + 1).padStart(2, "0")} / {project.title}</span><span>Artwork placeholder</span></figcaption>
+            <a className="project-link" href={`${project.id}.html`} tabIndex={-1} aria-hidden="true"><Artwork project={project} /></a>
+            <div className="hero-content">
+              <h2>{project.title}</h2>
+              <a className="outline-button" href={`${project.id}.html`}
+                aria-label={`View ${project.title}`}>View project</a>
+            </div>
           </figure>
         ))}
       </div>
       <div className="slideshow-controls">
-        <button type="button" onClick={() => showSlide(current - 1)} aria-label="Previous artwork">&larr;</button>
-        <div className="slide-dots" role="group" aria-label="Choose artwork">
+        <button className="carousel-arrow carousel-previous" type="button"
+          onClick={() => showSlide((index) => index - 1, -1)} aria-label="Previous project">&larr;</button>
+        <div className="slide-dots" role="group" aria-label="Choose project">
           {featured.map((project, index) => (
-            <button type="button" key={project.title} onClick={() => showSlide(index)}
-              aria-label={`Show artwork ${index + 1}`} aria-pressed={index === current}>
-              {String(index + 1).padStart(2, "0")}
+            <button type="button" key={project.id} onClick={() => showSlide(() => index)}
+              aria-label={`Show ${project.title}`} aria-pressed={index === current}>
+              <span aria-hidden="true" />
             </button>
           ))}
         </div>
-        <button type="button" onClick={() => showSlide(current + 1)} aria-label="Next artwork">&rarr;</button>
+        <button className="carousel-arrow carousel-next" type="button"
+          onClick={() => showSlide((index) => index + 1, 1)} aria-label="Next project">&rarr;</button>
       </div>
       <p className="visually-hidden" role="status" aria-live="polite">{announcement}</p>
     </section>
@@ -105,75 +187,52 @@ function Slideshow() {
 
 function HomePage() {
   return (
-    <main id="main" className="page">
+    <main id="main">
+      <h1 className="visually-hidden">Zayn's art and design portfolio</h1>
       <Slideshow />
-      <Header page="home" />
-      <section className="work-section" aria-labelledby="selected-work">
-        <div className="section-heading">
-          <h1 id="selected-work">Selected work</h1>
-          <p>A space for ideas, experiments, and things made.</p>
-        </div>
-        <ProjectGrid />
-        <a className="text-link" href="projects.html">Explore projects <span aria-hidden="true">&rarr;</span></a>
-      </section>
-      <section className="about-preview" aria-labelledby="hello">
-        <Portrait />
-        <div>
-          <p className="eyebrow">The person behind the work</p>
-          <h2 id="hello">Hello, I'm Zayn.</h2>
-          <p>This is where a short introduction will go. Share what you make, what inspires you, and the ideas behind your practice.</p>
-          <a className="text-link" href="about.html">A little more about me <span aria-hidden="true">&rarr;</span></a>
-        </div>
-      </section>
+      <div className="page">
+        <section id="projects" className="work-section" aria-labelledby="selected-work">
+          <h2 id="selected-work">Projects.</h2>
+          <ProjectGrid />
+        </section>
+      </div>
     </main>
   );
 }
 
-function ProjectsPage() {
+function ProjectPage({ project }) {
   return (
     <main id="main" className="page">
-      <section className="page-intro">
-        <p className="eyebrow">A collection of things made</p>
-        <h1>Projects</h1>
-        <p>Art, design, and everything in between.</p>
-        <p className="placeholder-note">Sample layouts only. Real projects and artwork are coming soon.</p>
-      </section>
-      <section aria-label="Project collection"><ProjectGrid descriptions /></section>
-    </main>
-  );
-}
-
-function AboutPage() {
-  return (
-    <main id="main" className="page">
-      <section className="page-intro">
-        <p className="eyebrow">The person behind the work</p><h1>About me</h1>
-      </section>
-      <section className="about-layout" aria-labelledby="introduction">
-        <div className="about-copy">
-          <h2 id="introduction">Hello, I'm Zayn.</h2>
-          <p className="lead">A space to introduce myself and my creative practice.</p>
-          <p>This is placeholder text for your biography. Describe the kind of art and design you make, how you got started, and what you enjoy exploring in your work.</p>
-          <p>Use this space to talk about your process, influences, or the materials you work with. Keep it personal and let visitors get to know the person behind the projects.</p>
-          <div className="about-details">
-            <h3>Get in touch</h3>
-            <p>Add your preferred contact details or social links here when you're ready to share them.</p>
-          </div>
-          <a className="text-link" href="projects.html">See my projects <span aria-hidden="true">&rarr;</span></a>
+      <section className="page-intro project-intro">
+        <h1>{project.title}</h1>
+        <div className="project-description">
+          {project.description.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
+          <p className="placeholder-note">Template text and images. Replace these with your project.</p>
         </div>
-        <figure className="portrait-figure"><Portrait /><figcaption>Your portrait goes here.</figcaption></figure>
+      </section>
+      <section className="project-gallery" aria-label="Project image placeholders">
+        <figure><Artwork project={project} /><figcaption>Featured image placeholder</figcaption></figure>
+        <figure><Artwork project={project} /><figcaption>Process image placeholder</figcaption></figure>
+        <figure><Artwork project={project} /><figcaption>Detail image placeholder</figcaption></figure>
       </section>
     </main>
   );
 }
 
 export default function App({ page }) {
+  const project = projects.find((item) => item.id === page);
+  useLayoutEffect(() => {
+    // Cross-page fragments need their target after React mounts the page.
+    document.getElementById(window.location.hash.slice(1))?.scrollIntoView();
+  }, [page]);
+  if (page !== "home" && !project) throw new Error(`Unknown portfolio page: ${page}`);
+
   return (
     <>
       <a className="skip-link" href="#main">Skip to content</a>
-      {page !== "home" && <Header page={page} />}
-      {page === "home" ? <HomePage /> : page === "projects" ? <ProjectsPage /> : <AboutPage />}
-      <Footer page={page} />
+      <Header page={page} />
+      {page === "home" ? <HomePage /> : <ProjectPage project={project} />}
+      <Footer />
     </>
   );
 }

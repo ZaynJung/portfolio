@@ -72,7 +72,6 @@ nav a { text-decoration: none; padding-block: 8px; }
 nav a[aria-current="page"] { text-decoration: underline; }
 .slideshow { margin-top: 40px; }
 .slides { display: grid; gap: 24px; }
-.slideshow.is-ready .slide:not(.is-active) { display: none; }
 .slide .artwork { aspect-ratio: 2.15; }
 figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 12px; color: var(--cp-text-muted); margin-top: 12px; }
 .slideshow-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }

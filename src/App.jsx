@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const projects = [
-  { title: "Shape studies", category: "Art", composition: "composition-one", alt: "Placeholder composition of a circle, arch, and fine lines" },
+  { title: "SHOTGUN!", category: "Concept Art and Design", composition: "composition-one", alt: "Placeholder composition of a circle, arch, and fine lines" },
   { title: "In conversation", category: "Design", composition: "composition-two", alt: "Placeholder composition of overlapping circular forms" },
   { title: "Finding balance", category: "Exploration", composition: "composition-three", alt: "Placeholder composition of stacked geometric forms" },
   { title: "Everyday forms", category: "Art", composition: "composition-two alternate", alt: "Overlapping forms artwork placeholder" },

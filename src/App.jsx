@@ -1,11 +1,13 @@
 import { useLayoutEffect, useState } from "react";
 import placeholderImage from "../assets/images/project-placeholder.png";
+import { projectImages } from "./project-images.js";
 
 const projects = [
   {
     id: "project-1",
     title: "SHOTGUN! (2025)",
     category: "Student Art and Design Project",
+    images: projectImages.shotgun,
     description: (
       <>
         <p>Fast and fantastical, Cyberpunk meets Formula One where high tech racing is everything. However an entity that was forced into the shadows remerges threatening this society. Will anyone be fast enough to stop this force?</p>
@@ -17,6 +19,7 @@ const projects = [
     id: "project-2",
     title: "The Eternals, Primordial and The Universe (2026)",
     category: "Student Art and Illustration Project",
+    images: projectImages.eternals,
     description: (
       <>
         <p>The Eternals, Primordial and The Universe was an experimental illustration project following the brief outlined by The Writers and Illustrators of the Future Contest.</p>
@@ -37,6 +40,7 @@ const projects = [
     id: "project-3",
     title: "Mythverse: Cosmic Curios (2026)",
     category: "Student Art and Design Project",
+    images: projectImages.mythverse,
     description: (
       <>
         <p>“Mythverse: Cosmic Curios” is a collaborative research and design project that wields concept design as a tool to promote diversity within toy and character design specifically for toys related to video games. It seeks to answer the question: “How can we recontextualise the understanding and usage of toys to advocate for diversity, especially in a video game space through intentional design?” Mythverse: Cosmic Curios’ is a toyline that extends upon the world and characters of Mythverse through merchandising. Characters translated into a toy, each design focuses on further platforming the integral idea of Mythverse as a brand that advocates and pushes for diversity in mainstream media. I wanted to create my own line of toys that were cute and trendy but also provided discussions in valuing uniqueness.</p>
@@ -50,10 +54,13 @@ const projects = [
   },
 ];
 
-function Artwork({ project }) {
+function Artwork({ project, filename = project.images.files[0], alt = `${project.title} preview`, loading = "lazy" }) {
+  const { folder, width, height } = project.images;
+  const src = `${import.meta.env.BASE_URL}images/projects/${encodeURIComponent(folder)}/${encodeURIComponent(filename)}`;
+
   return (
-    <img className="artwork" src={placeholderImage} alt={`${project.title} image placeholder`}
-      width="384" height="234" />
+    <img className="artwork" src={src} alt={alt}
+      width={width} height={height} loading={loading} decoding="async" />
   );
 }
 
@@ -65,7 +72,7 @@ function Header({ page }) {
   return (
     <header id="top" tabIndex={-1} className={`site-header ${page === "home" ? "home-header" : "page"}`}>
       <a className="wordmark" href="index.html" aria-current={page === "home" ? "page" : undefined}>
-        Zayn.
+        Zayn Jung
       </a>
       <nav aria-label="Main navigation">
         <a href={page === "home" ? "#projects" : "index.html#projects"}>Projects</a>
@@ -109,7 +116,7 @@ function Footer() {
         <Portrait />
       </section>
       <div className="site-footer">
-        <a className="footer-name" href="index.html">Zayn</a>
+        <a className="footer-name" href="index.html">Zayn Jung</a>
         <a className="outline-button back-to-top" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
       </div>
     </footer>
@@ -143,7 +150,7 @@ function Slideshow() {
   const { current, previous, direction, revision } = selection;
   const announcement = revision === 0
     ? ""
-    : `Project ${current + 1} of ${featured.length}: ${featured[current].title}, Image placeholder`;
+    : `Project ${current + 1} of ${featured.length}: ${featured[current].title}`;
 
   function showSlide(getNextIndex, forcedDirection) {
     setSelection((active) => {
@@ -177,7 +184,9 @@ function Slideshow() {
             inert={index !== current}
             onAnimationEnd={finishTransition}
             role="group" aria-roledescription="slide" aria-label={`${index + 1} of ${featured.length}`}>
-            <a className="project-link" href={`${project.id}.html`} tabIndex={-1} aria-hidden="true"><Artwork project={project} /></a>
+            <a className="project-link" href={`${project.id}.html`} tabIndex={-1} aria-hidden="true">
+              <Artwork project={project} loading={index === current ? "eager" : "lazy"} />
+            </a>
             <div className="hero-content">
               <h2>{project.title}</h2>
               <a className="outline-button" href={`${project.id}.html`}
@@ -229,10 +238,12 @@ function ProjectPage({ project }) {
           {project.description}
         </div>
       </section>
-      <section className="project-gallery" aria-label="Project image placeholders">
-        <figure><Artwork project={project} /><figcaption>Featured image placeholder</figcaption></figure>
-        <figure><Artwork project={project} /><figcaption>Process image placeholder</figcaption></figure>
-        <figure><Artwork project={project} /><figcaption>Detail image placeholder</figcaption></figure>
+      <section className="project-gallery" aria-label={`${project.title} images`}>
+        {project.images.files.map((filename, index) => (
+          <figure key={filename}>
+            <Artwork project={project} filename={filename} alt={`${project.title}, presentation page ${index + 1}`} />
+          </figure>
+        ))}
       </section>
     </main>
   );

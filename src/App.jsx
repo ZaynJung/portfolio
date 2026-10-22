@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import placeholderImage from "../assets/images/project-placeholder.png";
 import { projectImages } from "./project-images.js";
 
@@ -66,6 +66,8 @@ function Artwork({ project, filename = project.images.thumbnail.filename, alt = 
 }
 
 function Portrait() {
+  // Zayn: add your profile photo under assets/images and import it above.
+  // Use that import for src below, then update alt, width, and height.
   return <img className="portrait-placeholder" src={placeholderImage} alt="Portrait placeholder" width="384" height="234" loading="lazy" />;
 }
 
@@ -84,6 +86,9 @@ function Header({ page }) {
 }
 
 function SocialLinks() {
+  // Zayn: replace these disabled buttons with <a className="social-button"> links.
+  // Use your LinkedIn profile URL and mailto:your-email@example.com as the hrefs.
+  // Keep the SVG icons, close each link with </a>, and update aria-label/title.
   return (
     <div className="social-links" role="group" aria-label="Social links">
       <button className="social-button" type="button" disabled
@@ -112,7 +117,6 @@ function Footer() {
           <h2 id="about-heading">About me.</h2>
           <p>Hi! My name is Zayn Jung, a conceptual artist and illustrator, who has a deep passion for developing ideas in multimedia entertainment! I prioritise having fun and being experimental in the projects I create and work on to try to showcase new ideas into the world.</p>
           <SocialLinks />
-          <p className="social-note">LinkedIn and email links coming soon.</p>
         </div>
         <Portrait />
       </section>
@@ -153,7 +157,7 @@ function Slideshow() {
     ? ""
     : `Project ${current + 1} of ${featured.length}: ${featured[current].title}`;
 
-  function showSlide(getNextIndex, forcedDirection) {
+  const showSlide = useCallback((getNextIndex, forcedDirection) => {
     setSelection((active) => {
       const next = (getNextIndex(active.current) + featured.length) % featured.length;
       if (next === active.current) return active;
@@ -165,7 +169,12 @@ function Slideshow() {
         revision: active.revision + 1,
       };
     });
-  }
+  }, [featured.length]);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => showSlide((index) => index + 1, 1), 30_000);
+    return () => window.clearInterval(timer);
+  }, [showSlide]);
 
   function finishTransition(event) {
     if (event.animationName !== "slide-enter") return;

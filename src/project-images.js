@@ -25,7 +25,7 @@ export const projectImages = {
   },
   eternals: {
     folder: "The Eternals",
-    width: 330,
+    width: 3300,
     height: 1800,
     dpi: 300,
     thumbnail: { filename: "thumbnail.png", width: 3200, height: 1800 },

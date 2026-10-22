@@ -1,7 +1,7 @@
 Replace the PNGs in these folders with your artwork, keeping filenames and case unchanged:
 
 SHOTGUN!       - 4678 x 1654 pixels, 200 DPI, 15 images
-The Eternals   - 330 x 1800 pixels, 300 DPI, 3 images
+The Eternals   - 3300 x 1800 pixels, 300 DPI, 3 images
 Mythverse CC   - 7308 x 2780 pixels, 96 DPI, 17 images
 
 Each folder also has a thumbnail.png used for both the carousel and Projects card:

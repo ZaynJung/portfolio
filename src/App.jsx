@@ -4,28 +4,49 @@ import placeholderImage from "../assets/images/project-placeholder.png";
 const projects = [
   {
     id: "project-1",
-    title: "SHOTGUN!",
-    category: "Concept Art and Design",
-    description: [
-      "Introduce your first project here. Describe the idea behind the work, what inspired it, and what you wanted to communicate.",
-      "Use a second paragraph to talk about your role, process, and the materials or tools you used. The images below can show the finished work and how it developed.",
-    ],
+    title: "SHOTGUN! (2025)",
+    category: "Student Art and Design Project",
+    description: (
+      <>
+        <p>Fast and fantastical, Cyberpunk meets Formula One where high tech racing is everything. However an entity that was forced into the shadows remerges threatening this society. Will anyone be fast enough to stop this force?</p>
+        <p>“SHOTGUN!” is a fast-paced action, 2.5D animated series that was for a worldbuilding project in 2024. It was a project where developed a pitch bible and three asset packages.</p>
+      </>
+    ),
   },
   {
     id: "project-2",
-    title: "Project 2",
-    description: [
-      "Introduce your second project here. Describe the idea behind the work, what inspired it, and what you wanted to communicate.",
-      "Use a second paragraph to talk about your role, process, and the materials or tools you used. The images below can show the finished work and how it developed.",
-    ],
+    title: "The Eternals, Primordial and The Universe (2026)",
+    category: "Student Art and Illustration Project",
+    description: (
+      <>
+        <p>The Eternals, Primordial and The Universe was an experimental illustration project following the brief outlined by The Writers and Illustrators of the Future Contest.</p>
+        <p>The brief was:</p>
+        <ul className="project-brief">
+          <li>3 works of either Sci-Fi or Fantasy</li>
+          <li>Can be grayscale or coloured</li>
+          <li>Digital or Traditional is accepted</li>
+          <li>NO AI</li>
+          <li>Images submitted electronically must be a minimum of 300 dpi, a minimum of 5 x 7 inches and a maximum of 8.5 x 11 inches. The file can’t exceed 10 mb and must be .JPG or .JPEG.</li>
+        </ul>
+        <p>This was an opportunity for myself as an artist to broaden my abilities and try my hand at fantasy artwork. I’ve always been fascinated by the concept of gods and the pantheons that follow them. I really like stories of how humans used to believe the world was created such as Egyptian, Greek, Roman, Chinese, Korean and more Mythology. Thus I wanted to try to explore my own take on such deities. The story I’ve developed is a story between 4 deities who (in my thinking) represent each fundamental pillar of the universe. Each illustration shows off their history displaying events of their past, present and future.</p>
+        <p>Going into this assignment I would like to test my boundaries and explore colour and composition. I tend to limit myself into the reality of the world when depicting my art so I always subconsciously contain myself into the rigid forms and shapes I've taught myself. However with this I want to create dynamic artworks that help the eye flow through the composition. I like to think my target audience is for people who are in the entertainment industry or people who are looking to be in entertainment. Mystical, whimsical, ethereal and opulent are the words I want to define these artworks.</p>
+      </>
+    ),
   },
   {
     id: "project-3",
-    title: "Project 3",
-    description: [
-      "Introduce your third project here. Describe the idea behind the work, what inspired it, and what you wanted to communicate.",
-      "Use a second paragraph to talk about your role, process, and the materials or tools you used. The images below can show the finished work and how it developed.",
-    ],
+    title: "Mythverse: Cosmic Curios (2026)",
+    category: "Student Art and Design Project",
+    description: (
+      <>
+        <p>“Mythverse: Cosmic Curios” is a collaborative research and design project that wields concept design as a tool to promote diversity within toy and character design specifically for toys related to video games. It seeks to answer the question: “How can we recontextualise the understanding and usage of toys to advocate for diversity, especially in a video game space through intentional design?” Mythverse: Cosmic Curios’ is a toyline that extends upon the world and characters of Mythverse through merchandising. Characters translated into a toy, each design focuses on further platforming the integral idea of Mythverse as a brand that advocates and pushes for diversity in mainstream media. I wanted to create my own line of toys that were cute and trendy but also provided discussions in valuing uniqueness.</p>
+        <p>Modern day toys have evolved into something more than trinkets for children to play with the rise in 'kidults'. This movement has reshaped the definition of play to represent societal progress when it comes to tackling diversity. However an industry that still has struggles with that concept is the game industry. Toys are often a conduit used to teach children and adults alike about certain ideas. The messaging of designs for toys may be intentional and unintentional, but regardless it does create an impact. With this project, and as a designer, I want to exploit this aspect of toys and toy design in order to provide a way of celebrating diversity.</p>
+        <p>As someone who has a big interest in both the video game space and toy collector community space I am able to identify the shortfalls found in both communities, especially in instances where they intersect with one another. There is both a lack of effort put into meaningful representation in both industries which leads to toxic communities upholding the same continued and unwarranted bias towards marginalized communities, which is a concern I hope to shed light onto with this project.</p>
+        <p>Core ideas that led this project were diversity, identity and expression, cultural diversity, the theory that toys can become a form of activism, conflicts between people, and kidults, who are a demographic of adult people with a passion for toys formally acknowledged in Toy Fair 2024.</p>
+        <p>The primary audience will be obviously the fans of the game who would be young adults to adults. The secondary audience would be kidults, toy collectors and communities that are marginalized. Core ideas that led this project were diversity, identity and expression, cultural diversity, the theory that toys can become a form of activism, conflicts between people, and kidults, who are a demographic of adult people with a passion for toys formally acknowledged in Toy Fair 2024.</p>
+        <p>To begin this project I started with developing three characters that will be playable in this game with visual precedents in design work from Dislyte and Deadlock in mind; a tank, a DPS and a healer. I started with ingame characters in order to have a solid design to play with when I would translate them into toys later in this project.</p>
+      </>
+    ),
   },
 ];
 
@@ -81,8 +102,7 @@ function Footer() {
       <section id="about-me" className="about-preview" aria-labelledby="about-heading">
         <div className="about-copy">
           <h2 id="about-heading">About me.</h2>
-          <p className="about-name">Hello, I'm Zayn.</p>
-          <p>This is where a short introduction will go. Share what you make, what inspires you, and the ideas behind your practice.</p>
+          <p>Hi! My name is Zayn Jung, a conceptual artist and illustrator, who has a deep passion for developing ideas in multimedia entertainment! I prioritise having fun and being experimental in the projects I create and work on to try to showcase new ideas into the world.</p>
           <SocialLinks />
           <p className="social-note">LinkedIn and email links coming soon.</p>
         </div>
@@ -90,7 +110,6 @@ function Footer() {
       </section>
       <div className="site-footer">
         <a className="footer-name" href="index.html">Zayn</a>
-        <p>Art &amp; design portfolio</p>
         <a className="outline-button back-to-top" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
       </div>
     </footer>
@@ -106,7 +125,7 @@ function ProjectGrid() {
             <Artwork project={project} />
             <h3>{project.title}</h3>
           </a>
-          <p>{project.category ?? "Project placeholder"}</p>
+          <p>{project.category}</p>
         </article>
       ))}
     </div>
@@ -207,8 +226,7 @@ function ProjectPage({ project }) {
       <section className="page-intro project-intro">
         <h1>{project.title}</h1>
         <div className="project-description">
-          {project.description.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-          <p className="placeholder-note">Template text and images. Replace these with your project.</p>
+          {project.description}
         </div>
       </section>
       <section className="project-gallery" aria-label="Project image placeholders">

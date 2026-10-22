@@ -84,7 +84,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--cp-accent); out
 [hidden] { display: none !important; }
 h1, h2, h3, p, figure { margin: 0; }
 h1, h2, h3 { line-height: 1.2; font-weight: 600; text-transform: uppercase; }
-.wordmark, .footer-name, .back-to-top { text-transform: uppercase; }
+.wordmark, .footer-name, .outline-button, nav a { text-transform: uppercase; }
 .page { width: min(1120px, calc(100% - 96px)); margin-inline: auto; }
 .skip-link { position: absolute; top: 12px; left: 12px; padding: 12px; background: var(--cp-surface); z-index: 5; transform: translateY(-200%); }
 .skip-link:focus { transform: translateY(0); }
@@ -95,7 +95,7 @@ h1, h2, h3 { line-height: 1.2; font-weight: 600; text-transform: uppercase; }
 nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 64px; }
 nav a { text-decoration: none; padding: 4px 8px; border-bottom: 1px solid var(--cp-border); font-size: 18px; }
 nav a:hover, nav a[aria-current="page"] { color: var(--cp-text); border-color: var(--cp-text); }
-.slideshow { position: relative; height: 100svh; min-height: 680px; overflow: hidden; }
+.slideshow { position: relative; aspect-ratio: 16 / 9; overflow: hidden; }
 .slides, .slide { position: absolute; inset: 0; }
 .slide.is-active { z-index: 1; }
 .slide.is-entering { animation: slide-enter 450ms ease-in-out both; }
@@ -103,8 +103,8 @@ nav a:hover, nav a[aria-current="page"] { color: var(--cp-text); border-color: v
 .slide .project-link, .slide .artwork { width: 100%; height: 100%; }
 .slide .artwork { object-fit: cover; }
 .slide::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, var(--cp-overlay), var(--cp-accent-soft) 45%, var(--cp-bg)); }
-.hero-content { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; padding: 224px 96px 160px; text-align: center; pointer-events: none; }
-.hero-content h2 { font-size: clamp(48px, 8vw, 104px); font-weight: 700; letter-spacing: -2px; overflow-wrap: anywhere; }
+.hero-content { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; padding: 224px 96px 80px; text-align: center; pointer-events: none; }
+.hero-content h2 { font-size: clamp(24px, 6vw, 104px); font-weight: 700; letter-spacing: -2px; overflow-wrap: anywhere; }
 .hero-content a { pointer-events: auto; }
 .outline-button { display: inline-block; border: 2px solid var(--cp-text); border-radius: 999px; padding: 12px 40px; color: var(--cp-text); font-size: 18px; text-decoration: none; }
 .outline-button:hover { color: var(--cp-bg); background: var(--cp-text); }
@@ -155,14 +155,19 @@ nav a:hover, nav a[aria-current="page"] { color: var(--cp-text); border-color: v
   to { transform: translateX(calc(var(--slide-direction) * -100%)); }
 }
 
+@media (max-width: 1100px) {
+  .home-header { position: relative; }
+  .hero-content { padding: 24px 72px 64px; }
+  .hero-content h2 { font-size: clamp(20px, 5vw, 56px); letter-spacing: -1px; }
+}
 @media (max-width: 760px) {
   .page { width: calc(100% - 40px); }
   .site-header { gap: 24px; padding-block: 28px; }
   .wordmark { font-size: 44px; }
   nav { gap: 28px; }
   nav a { font-size: 16px; }
-  .hero-content { padding-top: 192px; padding-inline: 64px; }
-  .hero-content h2 { font-size: clamp(32px, 6vw, 48px); letter-spacing: -1px; }
+  .hero-content { gap: 16px; padding: 24px 64px 56px; }
+  .hero-content h2 { font-size: clamp(20px, 4vw, 32px); }
   .carousel-arrow { width: 44px; height: 44px; }
   .carousel-previous { left: 8px; }
   .carousel-next { right: 8px; }
@@ -175,8 +180,8 @@ nav a:hover, nav a[aria-current="page"] { color: var(--cp-text); border-color: v
 @media (max-width: 440px) {
   nav { gap: 16px; }
   nav a { padding-inline: 4px; }
+  .hero-content { gap: 4px; padding: 4px 56px 44px; }
+  .hero-content .outline-button { min-height: 44px; padding: 6px 20px; font-size: 14px; }
+  .slide-dots { bottom: 0; }
   .project-grid { grid-template-columns: 1fr; }
-}
-@media (max-height: 760px) {
-  .hero-content h2 { font-size: clamp(32px, 6vw, 72px); letter-spacing: -1px; }
 }

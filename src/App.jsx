@@ -54,8 +54,9 @@ const projects = [
   },
 ];
 
-function Artwork({ project, filename = project.images.files[0], alt = `${project.title} preview`, loading = "lazy" }) {
-  const { folder, width, height } = project.images;
+function Artwork({ project, filename = project.images.thumbnail.filename, alt = `${project.title} preview`, loading = "lazy" }) {
+  const { folder, thumbnail } = project.images;
+  const { width, height } = filename === thumbnail.filename ? thumbnail : project.images;
   const src = `${import.meta.env.BASE_URL}images/projects/${encodeURIComponent(folder)}/${encodeURIComponent(filename)}`;
 
   return (

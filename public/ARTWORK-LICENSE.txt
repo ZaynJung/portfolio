@@ -1,0 +1,68 @@
+ARTWORK COPYRIGHT AND USAGE TERMS
+
+Copyright (c) 2026 Zayn Jung. All rights reserved.
+
+1. Scope
+
+These terms apply to original artwork owned by Zayn Jung and made available in
+this repository or on its associated portfolio website, including illustrations,
+concept art, character designs, photographs, project presentation images,
+thumbnails, and copies or adaptations of those works ("Artwork").
+
+These terms do not apply to website source code, fonts, third-party materials,
+or material expressly provided under a separate license. Such materials remain
+subject to their respective owners' rights and applicable licenses. These terms
+do not grant rights that Zayn Jung does not own.
+
+2. Limited permission to view
+
+You may view the Artwork on the portfolio website for personal, non-commercial
+purposes. This includes ordinary browser display, technical caching necessary
+for that display, and accessibility tools used solely to access the website.
+No other permission or license is granted.
+
+3. Prohibited AI and machine-learning uses
+
+Without prior written permission from Zayn Jung, you may not:
+
+- Upload, submit, supply, or otherwise use the Artwork as input to artificial
+  intelligence or machine-learning systems or services, including as a prompt,
+  reference image, image-to-image input, conditioning input, or style reference.
+- Use the Artwork to train, pre-train, fine-tune, adapt, test, evaluate, or
+  benchmark any artificial intelligence or machine-learning model or system.
+- Collect, scrape, download, reproduce, label, embed, or include the Artwork
+  in datasets, training corpora, retrieval indexes, or other collections intended
+  for artificial intelligence or machine-learning use.
+- Use the Artwork to generate synthetic data, model outputs, imitations,
+  adaptations, or derivative works through such systems.
+- Supply or redistribute the Artwork to another person or organization for
+  any of these purposes.
+
+These restrictions apply to commercial, non-commercial, research, educational,
+and personal uses, whether the systems are hosted locally or by a third party.
+
+4. Other unauthorized uses
+
+Except for the limited viewing permission above, you may not copy, download,
+reproduce, modify, adapt, distribute, republish, display elsewhere, sell,
+sublicense, merchandise, or otherwise exploit the Artwork without prior written
+permission from Zayn Jung. You may not remove or alter copyright notices,
+signatures, watermarks, or ownership information.
+
+Attribution, a link to the website, public availability of the repository,
+or the absence of a watermark does not grant permission. Technical access,
+including access through a repository clone, does not grant a reuse license
+or waive any rights.
+
+5. Permissions and reservations
+
+Permission must be obtained in writing from Zayn Jung before the proposed use.
+Any permission applies only to the uses expressly authorized in that writing.
+All rights not expressly granted are reserved.
+
+6. Applicable law and platform terms
+
+These terms are subject to applicable law. They do not restrict uses that cannot
+lawfully be restricted, including applicable statutory exceptions, or supersede
+rights necessarily granted under the hosting platform's applicable terms.
+No additional rights are granted by implication.

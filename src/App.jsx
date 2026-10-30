@@ -10,8 +10,8 @@ const projects = [
     images: projectImages.shotgun,
     description: (
       <>
-        <p>Fast and fantastical, Cyberpunk meets Formula One where high tech racing is everything. However an entity that was forced into the shadows remerges threatening this society. Will anyone be fast enough to stop this force?</p>
-        <p>“SHOTGUN!” is a fast-paced action, 2.5D animated series that was for a worldbuilding project in 2024. It was a project where developed a pitch bible and three asset packages.</p>
+        <p>Fast and fantastical, cyberpunk meets Formula One, where high-tech racing is everything. However, an entity that was forced into the shadows reemerges, threatening this society. Will anyone be fast enough to stop this force?</p>
+        <p>“SHOTGUN!” is a fast-paced, 2.5D animated action series that was for a worldbuilding project in 2025. It was a project in which I developed a pitch bible and three asset packages.</p>
       </>
     ),
   },
@@ -25,14 +25,14 @@ const projects = [
         <p>The Eternals, Primordial and The Universe was an experimental illustration project following the brief outlined by The Writers and Illustrators of the Future Contest.</p>
         <p>The brief was:</p>
         <ul className="project-brief">
-          <li>3 works of either Sci-Fi or Fantasy</li>
-          <li>Can be grayscale or coloured</li>
-          <li>Digital or Traditional is accepted</li>
+          <li>3 works of either sci-fi or fantasy</li>
+          <li>Can be greyscale or coloured</li>
+          <li>Digital or traditional artwork is accepted</li>
           <li>NO AI</li>
-          <li>Images submitted electronically must be a minimum of 300 dpi, a minimum of 5 x 7 inches and a maximum of 8.5 x 11 inches. The file can’t exceed 10 mb and must be .JPG or .JPEG.</li>
+          <li>Images submitted electronically must be a minimum of 300 dpi, a minimum of 5 x 7 inches and a maximum of 8.5 x 11 inches. The file can’t exceed 10 MB and must be .JPG or .JPEG.</li>
         </ul>
-        <p>This was an opportunity for myself as an artist to broaden my abilities and try my hand at fantasy artwork. I’ve always been fascinated by the concept of gods and the pantheons that follow them. I really like stories of how humans used to believe the world was created such as Egyptian, Greek, Roman, Chinese, Korean and more Mythology. Thus I wanted to try to explore my own take on such deities. The story I’ve developed is a story between 4 deities who (in my thinking) represent each fundamental pillar of the universe. Each illustration shows off their history displaying events of their past, present and future.</p>
-        <p>Going into this assignment I would like to test my boundaries and explore colour and composition. I tend to limit myself into the reality of the world when depicting my art so I always subconsciously contain myself into the rigid forms and shapes I've taught myself. However with this I want to create dynamic artworks that help the eye flow through the composition. I like to think my target audience is for people who are in the entertainment industry or people who are looking to be in entertainment. Mystical, whimsical, ethereal and opulent are the words I want to define these artworks.</p>
+        <p>This was an opportunity for me as an artist to broaden my abilities and try my hand at fantasy artwork. I’d always been fascinated by the concept of gods and the pantheons that followed them. I really liked stories of how humans used to believe the world was created, such as those in Egyptian, Greek, Roman, Chinese, Korean and other mythologies. Thus, I wanted to try to explore my own take on such deities. The story I’d developed was a story about four deities who (in my thinking) represented each fundamental pillar of the universe. Each illustration revealed their history, depicting events of their past, present and future.</p>
+        <p>Going into this assignment, I wanted to test my boundaries and explore colour and composition. I tended to limit myself to realistic depictions of the world when depicting my art, so I always subconsciously confined myself to the rigid forms and shapes I’d taught myself. However, with this, I wanted to create dynamic artworks that helped the eye flow through the composition. I liked to think my target audience was people who were in the entertainment industry or people who were looking to be in entertainment. Mystical, whimsical, ethereal and opulent were the words I wanted to define these artworks.</p>
       </>
     ),
   },
@@ -43,12 +43,12 @@ const projects = [
     images: projectImages.mythverse,
     description: (
       <>
-        <p>“Mythverse: Cosmic Curios” is a collaborative research and design project that wields concept design as a tool to promote diversity within toy and character design specifically for toys related to video games. It seeks to answer the question: “How can we recontextualise the understanding and usage of toys to advocate for diversity, especially in a video game space through intentional design?” Mythverse: Cosmic Curios’ is a toyline that extends upon the world and characters of Mythverse through merchandising. Characters translated into a toy, each design focuses on further platforming the integral idea of Mythverse as a brand that advocates and pushes for diversity in mainstream media. I wanted to create my own line of toys that were cute and trendy but also provided discussions in valuing uniqueness.</p>
-        <p>Modern day toys have evolved into something more than trinkets for children to play with the rise in 'kidults'. This movement has reshaped the definition of play to represent societal progress when it comes to tackling diversity. However an industry that still has struggles with that concept is the game industry. Toys are often a conduit used to teach children and adults alike about certain ideas. The messaging of designs for toys may be intentional and unintentional, but regardless it does create an impact. With this project, and as a designer, I want to exploit this aspect of toys and toy design in order to provide a way of celebrating diversity.</p>
-        <p>As someone who has a big interest in both the video game space and toy collector community space I am able to identify the shortfalls found in both communities, especially in instances where they intersect with one another. There is both a lack of effort put into meaningful representation in both industries which leads to toxic communities upholding the same continued and unwarranted bias towards marginalized communities, which is a concern I hope to shed light onto with this project.</p>
-        <p>Core ideas that led this project were diversity, identity and expression, cultural diversity, the theory that toys can become a form of activism, conflicts between people, and kidults, who are a demographic of adult people with a passion for toys formally acknowledged in Toy Fair 2024.</p>
-        <p>The primary audience will be obviously the fans of the game who would be young adults to adults. The secondary audience would be kidults, toy collectors and communities that are marginalized. Core ideas that led this project were diversity, identity and expression, cultural diversity, the theory that toys can become a form of activism, conflicts between people, and kidults, who are a demographic of adult people with a passion for toys formally acknowledged in Toy Fair 2024.</p>
-        <p>To begin this project I started with developing three characters that will be playable in this game with visual precedents in design work from Dislyte and Deadlock in mind; a tank, a DPS and a healer. I started with ingame characters in order to have a solid design to play with when I would translate them into toys later in this project.</p>
+        <p>“Mythverse: Cosmic Curios” is a collaborative research and design project that wields concept design as a tool to promote diversity within toy and character design, specifically for toys related to video games. It seeks to answer the question: “How can we recontextualise the understanding and usage of toys to advocate for diversity, especially in a video game space through intentional design?” “Mythverse: Cosmic Curios” is a toy line that builds upon the world and characters of Mythverse through merchandising. By translating characters into toys, each design focuses on further platforming the integral idea of Mythverse as a brand that advocates and pushes for diversity in mainstream media. I wanted to create my own line of toys that were cute and trendy but also encouraged discussions about valuing uniqueness.</p>
+        <p>Modern-day toys have evolved into something more than trinkets for children to play with, particularly with the rise of ‘kidults’. This movement has reshaped the definition of play to represent societal progress when it comes to tackling diversity. However, an industry that still has struggles with that concept is the game industry. Toys are often a conduit used to teach children and adults alike about certain ideas. The messaging of designs for toys may be intentional and unintentional, but regardless, it does create an impact. With this project, and as a designer, I want to exploit this aspect of toys and toy design in order to provide a way of celebrating diversity.</p>
+        <p>As someone who has a big interest in both the video game and toy-collecting communities, I am able to identify the shortfalls found in both communities, especially in instances where they intersect with one another. There is a lack of effort put into meaningful representation in both industries, which leads to toxic communities upholding the same continued and unwarranted bias towards marginalised communities, which is a concern I hope to shed light on with this project.</p>
+        <p>Core ideas that led this project were diversity, identity and expression, cultural diversity, the theory that toys can become a form of activism, conflicts between people, and kidults, who are a demographic of adults with a passion for toys formally acknowledged at Toy Fair 2024.</p>
+        <p>The primary audience will be obviously the fans of the game who would be young adults to adults. The secondary audience would be kidults, toy collectors and communities that are marginalised.</p>
+        <p>To begin this project, I started with developing three characters that will be playable in this game with visual precedents in design work from Dislyte and Deadlock in mind: a tank, a DPS and a healer. I started with in-game characters in order to have a solid design to play with when I would translate them into toys later in this project.</p>
       </>
     ),
   },
@@ -87,6 +87,7 @@ function SocialLinks() {
   return (
     <div className="social-links" role="group" aria-label="Social links">
       <a className="social-button" href="https://www.linkedin.com/in/zayn-jung-152404446"
+        target="_blank" rel="noopener noreferrer"
         aria-label="LinkedIn" title="LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <circle cx="5" cy="5" r="1.5" fill="currentColor" />
@@ -110,8 +111,8 @@ function Footer() {
       <section id="about-me" className="about-preview" aria-labelledby="about-heading">
         <h2 id="about-heading">About me.</h2>
         <div className="about-copy">
-          <p>Hi! My name is Zayn Jung (정세인), the concept artist and fabricator for ‘Mythverse: Cosmic Curios’, currerntly working and located in Wellington, New Zealand. Originally from Auckland I moved to Wellington to pursue my dream career of working in the creative industry.</p>
-          <p>Outside of this project I’m a concept artist with a deep passion for developing ideas in mulltimedia entertainment! With my art, I priortize having fun and being experimental in projects as doing so helps develop more meaningful and visually captivating concepts.</p>
+          <p>Hi! My name is Zayn Jung (정세인), the concept artist and fabricator for ‘Mythverse: Cosmic Curios’, currently working and located in Wellington, New Zealand. Originally from Auckland, I moved to Wellington to pursue my dream career of working in the creative industry.</p>
+          <p>Outside of this project, I’m a concept artist with a deep passion for developing ideas in multimedia entertainment! With my art, I prioritise having fun and being experimental in projects as doing so helps develop more meaningful and visually captivating concepts.</p>
           <SocialLinks />
         </div>
         <Portrait />

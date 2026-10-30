@@ -4,7 +4,7 @@ export const projectImages = {
     width: 4678,
     height: 1654,
     dpi: 200,
-    thumbnail: { filename: "thumbnail.png", width: 2233, height: 1256 },
+    thumbnail: { filename: "thumbnail.png", width: 2324, height: 1308 },
     files: [
       "Z_Jung_AssetPackages-02.png",
       "Z_Jung_AssetPackages-03.png",
@@ -40,7 +40,7 @@ export const projectImages = {
     width: 1024,
     height: 363,
     dpi: 96,
-    thumbnail: { filename: "thumbnail.png", width: 1418, height: 797 },
+    thumbnail: { filename: "thumbnail.png", width: 3840, height: 2160 },
     files: [
       "1793158354891-d741d8f4-1dbe-49d3-8400-25b7384ab2ed_1.png",
       "1793158354891-d741d8f4-1dbe-49d3-8400-25b7384ab2ed_2.png",

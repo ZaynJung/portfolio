@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useLayoutEffect, useState } from "react";
-import placeholderImage from "../assets/images/project-placeholder.png";
+import profilePhoto from "../assets/images/pfp.jpg";
 import { projectImages } from "./project-images.js";
 
 const projects = [
@@ -66,9 +66,7 @@ function Artwork({ project, filename = project.images.thumbnail.filename, alt = 
 }
 
 function Portrait() {
-  // Zayn: add your profile photo under assets/images and import it above.
-  // Use that import for src below, then update alt, width, and height.
-  return <img className="portrait-placeholder" src={placeholderImage} alt="Portrait placeholder" width="384" height="234" loading="lazy" />;
+  return <img className="portrait" src={profilePhoto} alt="Zayn Jung" width="3000" height="4000" loading="lazy" />;
 }
 
 function Header({ page }) {
@@ -86,25 +84,22 @@ function Header({ page }) {
 }
 
 function SocialLinks() {
-  // Zayn: replace these disabled buttons with <a className="social-button"> links.
-  // Use your LinkedIn profile URL and mailto:your-email@example.com as the hrefs.
-  // Keep the SVG icons, close each link with </a>, and update aria-label/title.
   return (
     <div className="social-links" role="group" aria-label="Social links">
-      <button className="social-button" type="button" disabled
-        aria-label="LinkedIn link coming soon" title="LinkedIn link coming soon">
+      <a className="social-button" href="https://www.linkedin.com/in/zayn-jung-152404446"
+        aria-label="LinkedIn" title="LinkedIn">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <circle cx="5" cy="5" r="1.5" fill="currentColor" />
           <path d="M5 10v10M10 20V10m0 4c0-6 9-6 9 0v6" />
         </svg>
-      </button>
-      <button className="social-button" type="button" disabled
-        aria-label="Email link coming soon" title="Email link coming soon">
+      </a>
+      <a className="social-button" href="mailto:zaynjungart@gmail.com"
+        aria-label="Email" title="Email">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <rect x="3" y="5" width="18" height="14" rx="2" />
           <path d="m3 7 9 6 9-6" />
         </svg>
-      </button>
+      </a>
     </div>
   );
 }
@@ -113,8 +108,8 @@ function Footer() {
   return (
     <footer className="page">
       <section id="about-me" className="about-preview" aria-labelledby="about-heading">
+        <h2 id="about-heading">About me.</h2>
         <div className="about-copy">
-          <h2 id="about-heading">About me.</h2>
           <p>Hi! My name is Zayn Jung (정세인), the concept artist and fabricator for ‘Mythverse: Cosmic Curios’, currerntly working and located in Wellington, New Zealand. Originally from Auckland I moved to Wellington to pursue my dream career of working in the creative industry.</p>
           <p>Outside of this project I’m a concept artist with a deep passion for developing ideas in mulltimedia entertainment! With my art, I priortize having fun and being experimental in projects as doing so helps develop more meaningful and visually captivating concepts.</p>
           <SocialLinks />

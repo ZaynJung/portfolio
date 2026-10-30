@@ -78,10 +78,9 @@ Replace files using the same names, or update the manifest when filenames,
 dimensions, or gallery order change. Filenames are case-sensitive on GitHub Pages.
 Keep web-sized copies here and retain full-resolution originals separately.
 
-Edit project descriptions and the shared biography in `src/App.jsx`. Comments in
-`Portrait` and `SocialLinks` explain how to replace the profile-photo stand-in and
-disabled contact buttons with a real photo, LinkedIn URL, and email link.
-The current profile-photo stand-in is `assets/images/project-placeholder.png`.
+Edit project descriptions and the shared biography in `src/App.jsx`. The profile
+photo is `assets/images/pfp.jpg`, rendered by `Portrait`. The icon-only LinkedIn
+and email links are configured in `SocialLinks`.
 
 ## Artwork and third-party licenses
 

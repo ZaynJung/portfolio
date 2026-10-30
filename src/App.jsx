@@ -115,7 +115,8 @@ function Footer() {
       <section id="about-me" className="about-preview" aria-labelledby="about-heading">
         <div className="about-copy">
           <h2 id="about-heading">About me.</h2>
-          <p>Hi! My name is Zayn Jung, a conceptual artist and illustrator, who has a deep passion for developing ideas in multimedia entertainment! I prioritise having fun and being experimental in the projects I create and work on to try to showcase new ideas into the world.</p>
+          <p>Hi! My name is Zayn Jung (정세인), the concept artist and fabricator for ‘Mythverse: Cosmic Curios’, currerntly working and located in Wellington, New Zealand. Originally from Auckland I moved to Wellington to pursue my dream career of working in the creative industry.</p>
+          <p>Outside of this project I’m a concept artist with a deep passion for developing ideas in mulltimedia entertainment! With my art, I priortize having fun and being experimental in projects as doing so helps develop more meaningful and visually captivating concepts.</p>
           <SocialLinks />
         </div>
         <Portrait />

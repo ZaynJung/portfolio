@@ -1,64 +1,94 @@
 # Zayn | Art & Design
 
-A responsive, static portfolio based on the layout sketch. No framework,
-dependencies, or build step is required.
+Zayn Jung's art and design portfolio, built with React and Vite and hosted at
+**https://zaynjung.github.io/portfolio/**.
 
-## Pages
+## Website structure
 
-- `index.html`: featured slideshow, navigation, six selected works, and an about preview.
-- `projects.html`: a six-project grid with room for descriptions.
-- `about.html`: biography, portrait, and contact placeholders.
-- `assets/css/styles.css`: shared layout, light/dark theme, and placeholder artwork.
-- `assets/js/site.js`: accessible, manual slideshow controls.
+- `index.html`: a 16:9 featured-project carousel and three project cards.
+- `project-1.html`: SHOTGUN! (2025).
+- `project-2.html`: The Eternals, Primordial and The Universe (2026).
+- `project-3.html`: Mythverse: Cosmic Curios (2026).
+- `src/App.jsx`: page content, shared About Me footer, navigation, and carousel.
+- `src/project-images.js`: image filenames, gallery order, dimensions, and thumbnails.
+- `assets/css/styles.css`: shared styling and responsive layouts.
 
-The slideshow supports previous/next and direct slide selection with keyboard-accessible
-buttons. It does not auto-advance. Without JavaScript, all three featured works remain
-visible and navigation still works.
-
-## Publish with GitHub Pages
-
-1. Commit and push these files to `main`.
-2. In the repository on GitHub, open **Settings > Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**.
-4. Select **main** and **/ (root)**, then **Save**.
-5. Wait for the Pages deployment to finish; GitHub will show the published URL.
-
-Without a custom domain, the expected URL for this repository is:
-
-**https://zaynjung.github.io/zaynjungart.github.io/**
-
-This is a project site: the repository name does not match `ZaynJung.github.io`,
-so the repository name is included in the URL. If **Custom domain** is configured
-in Pages settings, that changes the published URL; clear it if you want the default
-address above. All local links use relative paths so the site supports either setup.
-`.nojekyll` tells Pages to serve the files without Jekyll processing.
+The carousel advances every 30 seconds and also supports previous/next arrows and
+direct slide selection. About Me appears in the shared footer on all four pages.
 
 ## Preview locally
 
-Open `index.html` in a browser, or, if Python is installed, serve the repository:
+Use Node.js 24 (the version used for deployment) and npm:
 
 ```powershell
-python -m http.server 8000
+npm ci
+npm run dev
 ```
 
-Then open **http://localhost:8000**. Stop the server with Ctrl+C.
+Open the local URL printed by Vite. To preview a production build:
 
-## Add your own content
+```powershell
+npm run build
+npm run preview
+```
 
-All artwork, project names, biography text, and the portrait are explicitly marked
-placeholders, not completed portfolio content.
+Do not open the HTML files directly or deploy the unbuilt source.
 
-- Put your image files in a new `assets/images` folder.
-- Replace each placeholder `<div class="artwork ...">...</div>` with an image, for
-  example `<img class="artwork" src="assets/images/my-project.jpg" alt="Describe your artwork" width="1200" height="900">`.
-  Use forward slashes in HTML URLs. Image sizing is already included in the stylesheet;
-  change `img.artwork` to use `object-fit: contain` if the full uncropped artwork
-  should be visible.
-- Update both the homepage selection and Projects page with your titles and descriptions.
-- Replace the portrait placeholders with an image and descriptive alternative text.
-- Write your biography in `about.html` and update the short introduction in `index.html`.
-- Add real contact/social links when ready; no fake contact details are included.
-- Update page titles, descriptions, and the shared navigation/footer in all three HTML files.
+## Deploy with GitHub Pages
 
-The theme follows the visitor's system preference. For a single-page preview,
-append `?scoutTheme=light` or `?scoutTheme=dark` to its URL.
+The repository is **https://github.com/ZaynJung/portfolio**.
+
+1. In the repository's **Settings > Pages**, select **GitHub Actions** as the source.
+2. Push changes to `main`, or run **Deploy portfolio to GitHub Pages** manually from
+   the Actions tab.
+3. Wait for the build and deployment jobs to succeed.
+4. Open **https://zaynjung.github.io/portfolio/**.
+
+`.github/workflows/deploy-pages.yml` installs dependencies with `npm ci`, reads
+GitHub's Pages configuration, builds with the configured URL base path
+(`/portfolio/`), and publishes `dist`. The deployment environment URL comes from
+the Pages action. Do not select **Deploy from a branch**.
+
+Local builds use relative URLs by default; deployment supplies the Pages base path
+to Vite so scripts, fonts, and images load under `/portfolio/`.
+
+## Update artwork and content
+
+Project images are stored in:
+
+```text
+public/images/projects/
+  SHOTGUN!/
+  The Eternals/
+  Mythverse CC/
+```
+
+Each folder's `thumbnail.png` is used for both its carousel image and Projects card.
+Thumbnails are separate from the detail-page galleries.
+
+Gallery filenames and order are explicitly listed in `src/project-images.js`:
+
+| Project | Gallery images | Gallery dimensions |
+| --- | --- | --- |
+| SHOTGUN! | 15 | 4678 x 1654 |
+| The Eternals | 3 | 3300 x 1800 |
+| Mythverse CC | 18, numbered 1 through 18 | 1024 x 363 |
+
+Replace files using the same names, or update the manifest when filenames,
+dimensions, or gallery order change. Filenames are case-sensitive on GitHub Pages.
+Keep web-sized copies here and retain full-resolution originals separately.
+
+Edit project descriptions and the shared biography in `src/App.jsx`. Comments in
+`Portrait` and `SocialLinks` explain how to replace the profile-photo stand-in and
+disabled contact buttons with a real photo, LinkedIn URL, and email link.
+The current profile-photo stand-in is `assets/images/project-placeholder.png`.
+
+## Artwork and third-party licenses
+
+Original artwork usage terms are in `public/ARTWORK-LICENSE.txt`, published at
+https://zaynjung.github.io/portfolio/ARTWORK-LICENSE.txt. They prohibit unauthorized
+reuse, including AI inputs and training, subject to applicable law.
+
+Third-party licenses remain separate: `public/THIRD_PARTY_NOTICES.txt` includes
+the layout attribution, and `public/Oswald-OFL.txt` covers the self-hosted Oswald
+font.

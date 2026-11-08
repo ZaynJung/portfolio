@@ -9,12 +9,13 @@ Zayn Jung's art and design portfolio, built with React and Vite and hosted at
 - `project-1.html`: SHOTGUN! (2025).
 - `project-2.html`: The Eternals, Primordial and The Universe (2026).
 - `project-3.html`: Mythverse: Cosmic Curios (2026).
-- `src/App.jsx`: page content, shared About Me footer, navigation, and carousel.
+- `src/App.jsx`: page content, homepage About Me section, shared footer, navigation, and carousel.
 - `src/project-images.js`: image filenames, gallery order, dimensions, and thumbnails.
 - `assets/css/styles.css`: shared styling and responsive layouts.
 
 The carousel advances every 30 seconds and also supports previous/next arrows and
-direct slide selection. About Me appears in the shared footer on all four pages.
+direct slide selection. About Me appears only on the homepage; project navigation
+links to that section on the homepage.
 
 ## Preview locally
 
@@ -78,7 +79,7 @@ Replace files using the same names, or update the manifest when filenames,
 dimensions, or gallery order change. Filenames are case-sensitive on GitHub Pages.
 Keep web-sized copies here and retain full-resolution originals separately.
 
-Edit project descriptions and the shared biography in `src/App.jsx`. The profile
+Edit project descriptions and the homepage biography in `src/App.jsx`. The profile
 photo is `assets/images/pfp.jpg`, rendered by `Portrait`. The icon-only LinkedIn
 and email links are configured in `SocialLinks`.
 

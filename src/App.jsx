@@ -77,7 +77,7 @@ function Header({ page }) {
       </a>
       <nav aria-label="Main navigation">
         <a href={page === "home" ? "#projects" : "index.html#projects"}>Projects</a>
-        <a href="#about-me">About me</a>
+        <a href={page === "home" ? "#about-me" : "index.html#about-me"}>About me</a>
       </nav>
     </header>
   );
@@ -105,10 +105,10 @@ function SocialLinks() {
   );
 }
 
-function Footer() {
+function Footer({ page }) {
   return (
     <footer className="page">
-      <section id="about-me" className="about-preview" aria-labelledby="about-heading">
+      {page === "home" && <section id="about-me" className="about-preview" aria-labelledby="about-heading">
         <h2 id="about-heading">About me.</h2>
         <div className="about-copy">
           <p>Hi! My name is Zayn Jung (정세인), the concept artist and fabricator for ‘Mythverse: Cosmic Curios’, currently working and located in Wellington, New Zealand. Originally from Auckland, I moved to Wellington to pursue my dream career of working in the creative industry.</p>
@@ -116,7 +116,7 @@ function Footer() {
           <SocialLinks />
         </div>
         <Portrait />
-      </section>
+      </section>}
       <div className="site-footer">
         <a className="footer-name" href="index.html">Zayn Jung</a>
         <a className="outline-button back-to-top" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
@@ -269,7 +269,7 @@ export default function App({ page }) {
       <a className="skip-link" href="#main">Skip to content</a>
       <Header page={page} />
       {page === "home" ? <HomePage /> : <ProjectPage project={project} />}
-      <Footer />
+      <Footer page={page} />
     </>
   );
 }

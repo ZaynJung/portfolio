@@ -60,10 +60,10 @@ html[data-theme] {
   --cp-border-strong: #666666;
   --cp-text: #ffffff;
   --cp-text-muted: #bbbbbb;
-  --cp-accent: #ff4545;
+  --cp-accent: #D2000B;
   --cp-accent-hover: #ff7777;
   --cp-accent-fg: #000000;
-  --cp-accent-soft: rgba(255, 69, 69, 0.04);
+  --cp-accent-soft: rgba(210, 0, 11, 0.04);
   --cp-overlay: rgba(0, 0, 0, 0.65);
 }
 

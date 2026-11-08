@@ -241,9 +241,6 @@ function ProjectPage({ project }) {
     <main id="main" className="page">
       <section className="page-intro project-intro">
         <h1>{project.title}</h1>
-        <div className="project-description">
-          {project.description}
-        </div>
       </section>
       <section className="project-gallery" aria-label={`${project.title} images`}>
         {project.images.files.map((filename, index) => (
@@ -252,6 +249,9 @@ function ProjectPage({ project }) {
           </figure>
         ))}
       </section>
+      <div className="project-description">
+        {project.description}
+      </div>
     </main>
   );
 }

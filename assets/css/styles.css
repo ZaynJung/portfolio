@@ -139,8 +139,8 @@ nav a:hover, nav a[aria-current="page"] { color: var(--cp-text); border-color: v
 .footer-name { font-size: 24px; font-weight: 600; color: var(--cp-accent); text-decoration: none; }
 .page-intro { padding-block: 40px 48px; }
 .page-intro > p { color: var(--cp-text); max-width: 56ch; }
-.project-intro .project-description { max-width: 80ch; color: var(--cp-text); }
-.project-intro .project-description p + p { margin-top: 20px; }
+.project-description { max-width: 80ch; color: var(--cp-text); padding-bottom: 48px; }
+.project-description p + p { margin-top: 20px; }
 .project-brief { margin-block: 20px; padding-inline-start: 24px; list-style-type: "★  "; }
 .project-brief li + li { margin-top: 12px; }
 .project-gallery { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; padding-bottom: 64px; }

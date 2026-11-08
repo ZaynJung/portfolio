@@ -72,7 +72,7 @@ Gallery filenames and order are explicitly listed in `src/project-images.js`:
 | --- | --- | --- |
 | SHOTGUN! | 15 | 4678 x 1654 |
 | The Eternals | 3 | 3300 x 1800 |
-| Mythverse CC | 18, numbered 1 through 18 | 1024 x 363 |
+| Mythverse CC | 18: unnumbered first image, then 2 through 18 | 7008 x 2480 |
 
 Replace files using the same names, or update the manifest when filenames,
 dimensions, or gallery order change. Filenames are case-sensitive on GitHub Pages.
